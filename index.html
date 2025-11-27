@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 名古屋冬季之旅</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+        }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: var(--primary-color);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 { margin: 0; font-size: 2em; }
+        .subtitle { margin-top: 10px; opacity: 0.9; }
+        
+        .info-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .info-item { display: flex; margin-bottom: 10px; align-items: baseline; }
+        .info-label { font-weight: bold; width: 80px; flex-shrink: 0; color: var(--primary-color); }
+        
+        .day-section {
+            background: var(--card-bg);
+            border-radius: 10px;
+            margin-bottom: 25px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .day-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
+        .timeline {
+            padding: 20px;
+        }
+        .event {
+            padding-left: 20px;
+            border-left: 3px solid #ddd;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .event:last-child { margin-bottom: 0; }
+        .event::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            position: absolute;
+            left: -7.5px;
+            top: 5px;
+        }
+        .time {
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 0.9em;
+            margin-bottom: 4px;
+            display: block;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .desc {
+            font-size: 0.95em;
+            color: #666;
+        }
+        .tag {
+            display: inline-block;
+            background: #eee;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-top: 5px;
+            color: #555;
+        }
+        .tag.booked { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        
+        footer {
+            text-align: center;
+            font-size: 0.8em;
+            color: #888;
+            margin-top: 40px;
+        }
+        
+        /* Mobile adjustment */
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .day-header { font-size: 1.1em; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>🇯🇵 名古屋四天三夜之旅</h1>
+        <div class="subtitle">2026/1/3 - 1/6 • ❄️ 冬季旅行</div>
+    </header>
+
+    <div class="info-card">
+        <h3>✈️ 航班與住宿資訊</h3>
+        <div class="info-item">
+            <span class="info-label">去程</span>
+            <span>CX530 | 12:00 TPE ➝ 15:35 NGO</span>
+        </div>
+        <div class="info-item">
+            <span class="info-label">回程</span>
+            <span>CX531 | 16:35 NGO ➝ 19:15 TPE</span>
+        </div>
+        <div class="info-item">
+            <span class="info-label">住宿</span>
+            <span>名古屋宜必思尚品飯店 (ibis Styles Nagoya)</span>
+        </div>
+    </div>
+
+    <div class="day-section">
+        <div class="day-header">
+            <span>Day 1 (1/3 六)</span>
+            <span>抵達日</span>
+        </div>
+        <div class="timeline">
+            <div class="event">
+                <span class="time">15:35</span>
+                <span class="title">抵達中部國際機場 (NGO)</span>
+                <div class="desc">搭乘名鐵特急 μ-SKY (約28分) 前往名古屋站。</div>
+            </div>
+            <div class="event">
+                <span class="time">16:30 - 18:00</span>
+                <span class="title">飯店 Check-in & 休息</span>
+                <div class="desc">從名古屋站步行至 ibis Styles 飯店。</div>
+            </div>
+            <div class="event">
+                <span class="time">18:30</span>
+                <span class="title">晚餐：味噌豬排 (榮商圈)</span>
+                <div class="desc">搭地鐵至榮站，推薦：矢場丼。</div>
+            </div>
+            <div class="event">
+                <span class="time">20:00</span>
+                <span class="title">綠洲 21 (Oasis 21) 夜景</span>
+                <div class="desc">欣賞「水之宇宙船」與名古屋電視塔夜景。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="day-section">
+        <div class="day-header">
+            <span>Day 2 (1/4 日)</span>
+            <span>合掌村之旅</span>
+        </div>
+        <div class="timeline">
+            <div class="event">
+                <span class="time">全天</span>
+                <span class="title">合掌村一日遊</span>
+                <div class="desc">搭乘 KKday 專車前往白川鄉合掌村。午餐於當地享用飛驒牛串燒等小吃。</div>
+                <span class="tag booked">已預訂 KKday</span>
+            </div>
+            <div class="event">
+                <span class="time">20:00</span>
+                <span class="title">晚餐：手羽先 (炸雞翅)</span>
+                <div class="desc">回到名古屋站周邊。推薦：世界の山ちゃん 或 風來坊。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="day-section">
+        <div class="day-header">
+            <span>Day 3 (1/5 一)</span>
+            <span>吉卜力公園</span>
+        </div>
+        <div class="timeline">
+            <div class="event">
+                <span class="time">上午</span>
+                <span class="title">吉卜力公園</span>
+                <div class="desc">地鐵東山線至藤之丘站 轉 Linimo 至愛・地球博紀念公園站。</div>
+                <span class="tag booked">已預訂門票</span>
+            </div>
+            <div class="event">
+                <span class="time">14:30</span>
+                <span class="title">大須商店街</span>
+                <div class="desc">地鐵至大須觀音站。逛街、古著、台灣特色美食。</div>
+            </div>
+            <div class="event">
+                <span class="time">18:30</span>
+                <span class="title">晚餐：鰻魚飯三吃</span>
+                <div class="desc">推薦：蓬萊軒 或 まるや (Maruya)。</div>
+            </div>
+            <div class="event">
+                <span class="time">20:00</span>
+                <span class="title">購物行程</span>
+                <div class="desc">唐吉軻德或 Bic Camera (榮或名古屋站周邊)。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="day-section">
+        <div class="day-header">
+            <span>Day 4 (1/6 二)</span>
+            <span>古蹟與返程</span>
+        </div>
+        <div class="timeline">
+            <div class="event">
+                <span class="time">09:00</span>
+                <span class="title">名古屋城</span>
+                <div class="desc">地鐵名城線至市役所站。參觀本丸御殿與天守閣外觀。</div>
+            </div>
+            <div class="event">
+                <span class="time">11:30</span>
+                <span class="title">午餐：名古屋交趾雞</span>
+                <div class="desc">返回名古屋站周邊用餐。推薦：鳥開。</div>
+            </div>
+            <div class="event">
+                <span class="time">13:00</span>
+                <span class="title">前往機場</span>
+                <div class="desc">搭乘名鐵前往中部國際機場。</div>
+            </div>
+            <div class="event">
+                <span class="time">16:35</span>
+                <span class="title">班機起飛 (CX531)</span>
+                <div class="desc">返回溫暖的家。</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>祝旅途愉快！ Have a nice trip!</p>
+    </footer>
+</div>
+
+</body>
+</html>
